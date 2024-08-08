@@ -7,6 +7,8 @@ import { IParametro, TagValordbLocal, Sensores } from '../interfaces/db.interfaz
 import { sensors } from '../api_server/sensors';
 import { valores } from '../api_server/valores';
 
+import logger from '../utilidades/logger';
+
 
 //Funcion que lee de la base de datos rokadb los valores del tag pasado como parametros 
 //en las fechas desde hasta
@@ -39,9 +41,7 @@ const consultaValorTag  = async (tagname :string,fecha_desde: string, fechahasta
         return resultado;
   
     } catch (error)  {
-        console.log("Error al ejecutar Consultar Valor", error);
-
-        
+        logger.error("Error al ejecutar procedimiento consulta_valor en la base de datos local del roka" + error.message);        
     }
 };
 
@@ -68,7 +68,7 @@ export async function LeeListaSensores(frio: string): Promise<Sensores[]> {
             return arraySensors;
             
         } catch (error) {
-            console.log("Error al leer lista de sensores de la api del backend: " + error)
+            logger.error("Error al leer lista de sensores de la api con error" + error.message);
             return [];
         }
 
@@ -123,7 +123,7 @@ const LeeValoresTagdbLocal = async (arraySensors: Sensores[]) => {
       
 
     } catch (error)  {
-        console.log("Error al leer valores de la db local", error);   
+        logger.error("Error al leer valores de la base de datos local del roka" + error.message);   
         return 0;
     }  
 
@@ -141,16 +141,22 @@ export async function ejecutarCadaDosMinutos(frio: string/*arraySensors: Sensore
 
         //Lee lista de sensores, una vez que ya tiene la lista no la lee mas
         if (ArraySensores.length == 0) {
-            ArraySensores = await LeeListaSensores(frio);
-            if (ArraySensores.length == 0) {
-                Contador_Fallas = Contador_Fallas + 1;
-                console.log(`Cantidas de fallas: ${Contador_Fallas}`);
+            try {
+                ArraySensores = await LeeListaSensores(frio);
+                if (ArraySensores.length == 0) {
+                    Contador_Fallas = Contador_Fallas + 1;
+                    logger.error("No se pudo obtener lista de sensores, cantidad de reintentos=" + Contador_Fallas);
+                    console.log(`Cantidas de fallas: ${Contador_Fallas}`);
+                }
+                else
+                    logger.info("Se obtuvo con exito la lista de sensores de la api")                   
+            } catch (error) {
+                logger.error("Error al leer lista de sensores de la api del bakend con error" + error.message);              
             }
         }
         else
         {
             Contador_Fallas = 0;
-            console.log("Se leyo la lista de sensores del backend");
         }
 
         if (ArraySensores.length > 0) {
@@ -163,14 +169,14 @@ export async function ejecutarCadaDosMinutos(frio: string/*arraySensors: Sensore
                         // Enviar los valores a la api del backend
                         await valores.postValores(ValoresTagdbLocal)
                     } catch (error) {
-                        console.log(error);
+                        logger.error("Error al enviar valores a la api con error" + error.message);
                     }
                 }
                 else
-                    console.log("No se pudieron leer valores de la base de datos local")    
+                    logger.error("No se pudiero leer valores de la base de datos local del roka");    
             }
             catch (error)  {
-                    console.log("Error al enviar valores a la api del backend", error);   
+                logger.error("Error al leer valores de la base de datos local del roka" + error.message);   
             }            
         }   
 

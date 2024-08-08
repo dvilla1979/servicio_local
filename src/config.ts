@@ -20,7 +20,7 @@ const validarVariableDeEntorno = (nombre: string) => {
 };
 
 export const CONFIG = {
-  APP_PORT: validarVariableDeEntorno('PORT') || process.env.PORT,
+  APP_PORT: validarVariableDeEntorno('APP_PORT') || process.env.APP_PORT,
   DB_HOST: validarVariableDeEntorno('DB_HOST'),
   DB_USER: validarVariableDeEntorno('DB_USER'),
   DB_PASSWORD: validarVariableDeEntorno('DB_PASSWORD'),
