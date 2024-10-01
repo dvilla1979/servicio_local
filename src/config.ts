@@ -26,5 +26,7 @@ export const CONFIG = {
   DB_PASSWORD: validarVariableDeEntorno('DB_PASSWORD'),
   BD_DATABASE: validarVariableDeEntorno('DB_DATABASE'),
   DB_PORT: validarVariableDeEntorno('DB_PORT'),
-  FRIO_NAME: validarVariableDeEntorno('FRIO_NAME')
+  FRIO_NAME: validarVariableDeEntorno('FRIO_NAME'),
+  API_URL: validarVariableDeEntorno('API_URL'),
+  API_KEY: validarVariableDeEntorno('API_KEY')
 };
