@@ -1,7 +1,7 @@
 import axios from "axios"
 import {CONFIG} from "../config"
 
-export const BASE_URL = CONFIG.API_;//"http://127.0.0.1:8000/api/";
+export const BASE_URL = CONFIG.API_URL;//"http://127.0.0.1:8000/api/";
 
 export const instance = axios.create({
     baseURL: BASE_URL,
