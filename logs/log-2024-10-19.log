@@ -1,0 +1,21 @@
+2024-10-19 11:13:50:1350 [32minfo[39m: [32mServicio Iniciado en el frigorífico: Emelka Chichinales  [39m
+2024-10-19 11:13:50:1350 [32minfo[39m: [32mConexión exitosa a la base de datos[39m
+2024-10-19 11:13:52:1352 [31merror[39m: [31mError al leer lista de sensores de la api con errorconnect ECONNREFUSED 192.168.0.239:8000[39m
+2024-10-19 11:13:52:1352 [31merror[39m: [31mNo se pudo obtener lista de sensores, cantidad de reintentos=1[39m
+2024-10-19 11:15:52:1552 [32minfo[39m: [32mSe obtuvo con exito la lista de sensores de la api[39m
+2024-10-19 11:15:53:1553 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:17:53:1753 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:19:54:1954 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:21:54:2154 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:23:55:2355 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:25:55:2555 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:27:55:2755 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:29:55:2955 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:31:56:3156 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:33:56:3356 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:35:57:3557 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:37:57:3757 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:39:57:3957 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:41:58:4158 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:43:58:4358 [32minfo[39m: [32mSe envían valores a la api[39m
+2024-10-19 11:45:58:4558 [32minfo[39m: [32mSe envían valores a la api[39m

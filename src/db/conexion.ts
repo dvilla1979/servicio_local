@@ -2,6 +2,7 @@ import * as sql from 'mssql';
 import { CONFIG } from '../config';
 import { IParametro } from '../interfaces/db.interfaz';
 import { HttpRespuestaError } from '../utilidades/httpRespuestaError';
+import logger from '../utilidades/logger';
 
 class Conexion {
   public config: sql.config;
@@ -22,7 +23,29 @@ class Conexion {
         trustServerCertificate: true
       }
     };
+
   }
+
+  
+    // Método para conectar a la base de datos
+   public async conectar(): Promise<void> {
+      let pool!: sql.ConnectionPool;
+
+      try {
+          if (!pool) {
+              pool = await sql.connect(this.config);
+              logger.info('Conexión exitosa a la base de datos');
+          }
+      } catch (error) {
+        logger.error('Error al conectarse a la base de datos:' + error.messagge);
+      }
+     finally {
+      if (pool && typeof pool.close === 'function') {
+        pool.close();
+      }
+    }
+  }
+
 
 async Ejecutar(procedimiento: string, parametros: IParametro[] = []): Promise<any> {
     return new Promise(async (resolve, reject) => {

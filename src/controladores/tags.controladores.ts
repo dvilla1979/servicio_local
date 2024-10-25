@@ -63,7 +63,7 @@ export async function LeeListaSensores(frio: string): Promise<Sensores[]> {
                 }
             })
 
-            console.log("Array de objetos ",arraySensors);
+          //  console.log("Array de objetos ",arraySensors);
 
             return arraySensors;
             
@@ -167,6 +167,7 @@ export async function ejecutarCadaDosMinutos(frio: string/*arraySensors: Sensore
                 if(ValoresTagdbLocal != 0) {
                     try {
                         // Enviar los valores a la api del backend
+                        logger.info("Se envían valores a la api")
                         await valores.postValores(ValoresTagdbLocal)
                     } catch (error) {
                         logger.error("Error al enviar valores a la api con error" + error.message);

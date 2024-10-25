@@ -1,0 +1,14 @@
+2024-10-16 11:36:56:3656 [32minfo[39m: [32mServicio Iniciado corriendo en el puerto 3001[39m
+2024-10-16 11:36:57:3657 [32minfo[39m: [32mSe obtuvo con exito la lista de sensores de la api[39m
+2024-10-16 13:09:20:920 [31merror[39m: [31mError al enviar valores a la api con errorconnect EHOSTUNREACH 192.168.0.239:8000[39m
+2024-10-16 13:27:59:2759 [31merror[39m: [31mError al enviar valores a la api con errorconnect ETIMEDOUT 192.168.0.239:8000[39m
+2024-10-16 13:58:49:5849 [31merror[39m: [31mError al enviar valores a la api con errorconnect EHOSTUNREACH 192.168.0.239:8000[39m
+2024-10-16 14:03:13:313 [31merror[39m: [31mError al enviar valores a la api con errorconnect ETIMEDOUT 192.168.0.239:8000[39m
+2024-10-16 14:05:34:534 [31merror[39m: [31mError al enviar valores a la api con errorconnect ETIMEDOUT 192.168.0.239:8000[39m
+2024-10-16 14:07:34:734 [31merror[39m: [31mError al enviar valores a la api con errorconnect EHOSTUNREACH 192.168.0.239:8000[39m
+2024-10-16 14:09:34:934 [31merror[39m: [31mError al enviar valores a la api con errorconnect EHOSTUNREACH 192.168.0.239:8000[39m
+2024-10-16 14:17:43:1743 [31merror[39m: [31mError al enviar valores a la api con errorconnect EHOSTUNREACH 192.168.0.239:8000[39m
+2024-10-16 14:22:04:224 [31merror[39m: [31mError al enviar valores a la api con errorconnect ETIMEDOUT 192.168.0.239:8000[39m
+2024-10-16 15:04:32:432 [31merror[39m: [31mError al enviar valores a la api con errorconnect ETIMEDOUT 192.168.0.239:8000[39m
+2024-10-16 18:01:41:141 [31merror[39m: [31mError al enviar valores a la api con errorconnect ETIMEDOUT 192.168.0.239:8000[39m
+2024-10-16 18:04:02:42 [31merror[39m: [31mError al enviar valores a la api con errorconnect ETIMEDOUT 192.168.0.239:8000[39m
