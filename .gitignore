@@ -1,5 +1,5 @@
 node_modules/
+logs
 dist/
-logs/
 .env
 package-lock.json
